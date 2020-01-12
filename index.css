@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #333333;
+    margin: 0;
+}
+
+.field {
+    width: 420px;
+    height: 420px;
+    background: #9999ff;
+    position: relative;
+    top: calc(50% - 210px);
+    left: calc(50% - 210px);
+}
+
+.head, .part {
+    width: 20px;
+    height: 20px;
+    background: #99ff99;
+    position: absolute;
+}
+
+.head {
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    z-index: 100;
+    border-radius: 7px 7px 0 0;
+}
+
+.head:after {
+    position: absolute;
+    content: '';
+    background: red;
+    width: 2px;
+    height: 25%;
+    top: -25%;
+    left: calc(50% - 1px);
+}
+
+.head[alive="true"]:before {
+    position: absolute;
+    content: '';
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    height: 2px;
+    width: 6px;
+    top: 40%;
+    left: calc(50% - 5px);
+}
+
+.head[alive="false"]:before {
+    position: absolute;
+    content: 'X X';
+    color: black;
+    font-size: 6px;
+    font-weight: bold;
+    top: 30%;
+    left: calc(50% - 6px);
+}
+
+.apple {
+    width: 20px;
+    height: 20px;
+    background: #ff4444;
+    position: absolute;
+}
